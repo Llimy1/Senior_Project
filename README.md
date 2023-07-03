@@ -13,13 +13,14 @@
 - 관리 툴: ```GitHub```
 
 > <h2>🗃 기술 스택</h2>
+- ```YOLOv7```
 - ```OpenCV```
 - ```Python```
+- ```FAST API```
 - ```Arduino```
 - ```Html```
 - ```CSS```
 - ```Javascript```
-- ```Java```
 - ```Mysql```
 
 > <h2>📋 프로젝트 소개 및 구조</h2>
