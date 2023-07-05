@@ -21,7 +21,7 @@
 - ```Html```
 - ```CSS```
 - ```Javascript```
-- ```Mysql```
+- ```SQLite```
 
 > <h2>📋 프로젝트 소개 및 구조</h2>
 - [AI-HUB](https://www.aihub.or.kr/) 데이터의 [시니어 이상행동 영상 모델](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=167)을 활용하여 요양원의 시니어 낙상 및 배회 등을 빠른 대처를 위한 스마트 지능형 CCTV 기능 구현
