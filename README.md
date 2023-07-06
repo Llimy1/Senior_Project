@@ -8,19 +8,22 @@
 > <h2>⚙ 개발 환경</h2>
 - 운영체제 : ```Window```
 - 통합개발환경(IDE) : ```VS Code```
-- CUDA 버전: ```CUDA 11.8```
+- CUDA 버전: ```CUDA 10.1```
+- CUDNN 버전: ```CUDNN 7.6```
 - Anaconda: ```Miniconda3```
 - 관리 툴: ```GitHub```
 
 > <h2>🗃 기술 스택</h2>
 - ```YOLOv7```
 - ```OpenCV```
+- ```tensorflow-gpu```
 - ```Python```
 - ```FAST API```
 - ```Arduino```
 - ```Html```
 - ```CSS```
 - ```Javascript```
+- ```jquery```
 - ```SQLite```
 
 > <h2>📋 프로젝트 소개 및 구조</h2>
