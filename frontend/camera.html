@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Project Senior</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="landing is-preload" style="overflow:hidden;">
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1><a href="index.html">Team Senior</a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle"><span></span></a>
+						<div id="menu">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="0_presentation.html">Presentation</a></li>
+								<!-- <li><a href="#">Log In</a></li> -->
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<section>
+		<h4>cctv</h4>
+		<section class="a wrapper alt style7">
+			<div class="video1">
+				<video id="video" autoplay playsinline></video>
+				<canvas id="canvas"></canvas>
+			</div>
+			<div class="upload-section">
+				<div class="load-icon">
+
+					<div class="icon-section1">
+						<!-- <div class="loading-container">
+							<div class="loading"></div>
+							<div id="loading-text">loading</div>
+						</div> -->
+					</div>
+
+					<div class="icon-section2">
+						<!-- <div class="loading-container">
+							<div class="loading"></div>
+							<div id="loading-text">loading</div>
+						</div> -->
+					</div>
+
+				</div>
+			</div>
+			<div class="load-icon btn aaa">
+				<form id="upload-form" class = "upload-from-class">
+					<input type="file" id="input-file" name="image" style="display: none;" />
+					<label class="input-file-button label-upload label-btn label1" for="input-file">
+						<span>UPLOAD</span>
+					</label>
+					<!-- <input type="file" name="file" id="imageFileOpenInput" accept="image/*"> -->
+					<!-- <button class="btn1" type="submit">SEND</button> -->
+					<input type="submit" id="input-send" style="display: none;" />
+					<label class="btn1 label-btn label2" for="input-send">
+						<span>SEND</span>
+					</label>
+				</form>
+			</div>
+		</section>
+		<section class="b">
+			<div class="jackpots">경고 문구 자리</div>
+		</section>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<ul class="copyright">
+			<li>&copy; Untitled</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.0.4/dist/mobilenet.min.js"></script> -->
+	<script src="assets/js/upload.js"></script>
+	<script src="assets/js/webcam.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	</div>
+</body>
+
+</html>

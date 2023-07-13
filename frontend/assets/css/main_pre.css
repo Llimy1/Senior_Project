@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Black Ops One", cursive;
+  overflow: hidden;
+  margin: 0;
+  background-color: #dfe9f3;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.7s ease-in-out;
+  filter: blur(4px);
+}
+
+.slide h3 {
+  position: absolute;
+  font-size: clamp(1rem, 5vw, 5rem);
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  background-color: #e3fdf5;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide.active {
+  flex: 10;
+  filter: blur(0px);
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media screen and (max-width: 50rem) {
+  .container {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide {
+    width: 90vw;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.7s ease-in-out;
+    filter: blur(4px);
+  }
+
+  .slide.active {
+    flex: 10;
+    filter: blur(0px);
+  }
+
+  .slide h3 {
+    left: 5px;
+  }
+}

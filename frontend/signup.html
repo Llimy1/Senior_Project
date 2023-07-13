@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project Senior</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		</head>
+	<body class="landing is-preload">
+			<div id="page-wrapper">
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Team Senior</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span></span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="login.html">LOGIN</a></li>
+                                            <li><a href="0_presentation.html">Presentation</a></li>
+											<!-- <li><a href="#">Log In</a></li> -->
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+            </div>
+        </body>
+        <article id="main">
+            <header>
+                <h2>회원 가입</h2>
+                <p>
+        <section>
+    <form id="signup-form" action="/signup" method="POST">
+        <div>
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" required />
+        </div>
+        <div>
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+            <label for="password-check">PASSWORD CHECK</label>
+            <input type="password" id="password-check" name="password-check" required />
+        </div>
+        <div>
+            <button type="submit" class = "button primary">SING UP</button>
+        </div>
+    </form>
+    </section>
+
+    <script	src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="assets/js/singup.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</html>
