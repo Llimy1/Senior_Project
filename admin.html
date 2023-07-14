@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TRAIN</title>
+<style>
+#att_zone {
+  width: 660px;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px dotted #00f;
+}
+
+#att_zone:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  font-size: .9em;
+}
+</style>
+</head>
+<body>
+  <div id='image_preview'>
+    <input type='file' id='btnAtt' multiple='multiple' />
+    <div id='att_zone'
+      data-placeholder='파일을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그앤드롭 하세요'></div>
+  </div>
+  <div>
+    <button id="file-send">전송</button>
+  </div>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
