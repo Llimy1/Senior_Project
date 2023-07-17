@@ -1,7 +1,10 @@
+// 회원 가입
+
 const form = document.querySelector("#signup-form");
 const passwordInput = document.querySelector("#password");
 const passwordCheckInput = document.querySelector("#password-check");
 
+// 비밀번호 확인
 const checkPassword = () => {
     const formData = new FormData(form);
     const password = formData.get("password");
@@ -16,9 +19,11 @@ const handleSubmitForm = async (event) => {
 
     event.preventDefault();
     const formData = new FormData(form);
+    // sha256으로 비밀번호 암호화
     const sha256Password = sha256(formData.get("password"));
     formData.set("password", sha256Password);
 
+    // 비밀번호 입력과 비밀번호 확인이 일치하면 회원 가입이 가능
     if (checkPassword()) {
         const res = await fetch("/signup", {
             method : "post",
@@ -28,9 +33,11 @@ const handleSubmitForm = async (event) => {
         const data = await res.json();
 
         if (data === "200") {
+            // 회원 가입이 성공하면 로그인 화면으로 이동
             window.location.pathname = "login.html";
         }
     } else {
+        // 비밀번호와 비밀번호 확인이 틀리면 나오는 애니메이션
         passwordInput.classList.add("shake", "invalid");
         passwordCheckInput.classList.add("shake", "invalid");
 

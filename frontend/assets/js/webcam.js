@@ -1,10 +1,15 @@
+// COCO-SSD를 사용한 Object Detect
+
+// boxing을 위한 x,y
 let x = 0;
 let y = 0;
 
+// coco-ssd 모델 로드
 async function loadModel() {
   return cocoSsd.load();
 }
 
+// coco-ssd 모델을 사용하여 웹캠에 박싱 처리
 async function detectObjects(model) {
   const video = document.getElementById('video');
   const canvas = document.getElementById('canvas');
@@ -39,6 +44,7 @@ async function detectObjects(model) {
   requestAnimationFrame(() => detectObjects(model));
 }
 
+// 모델이 적용된 웹캠 실행
 async function run() {
   const model = await loadModel();
   const video = document.getElementById('video');

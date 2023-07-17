@@ -1,3 +1,5 @@
+// CCTV 화면 이미지 업로그 및 출력 부분
+
 const upload_form = document.getElementById("upload-form");
 const input_upload = document.getElementById("input-file");
 
@@ -30,12 +32,28 @@ function reset() {
     }
 }
 
-// 이미지 및 문구 출력
-const handleUploadForm = async (event) => {
-    event.preventDefault();
-    reset();
-    const body = new FormData(upload_form);
+// Detect 이미지 출력
+async function handlePreviewForm() {
+    const preview_section = document.querySelector(".icon-section2");
+    const img = document.createElement("img");
+    const res = await fetch("/detect_image");
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    img.src= url;
+    preview_section.appendChild(img);
+}
 
+// 문구 출력
+async function handleText() {
+    const detect_image_text = document.querySelector(".jackpots");
+    const res = await fetch("/condition");
+    const data = await res.json();
+
+    detect_image_text.innerText = data.toUpperCase();
+}
+
+// 로딩 생성
+function loadingCreate() {
     const icon_section1 = document.querySelector(".icon-section1");
     const icon_section2 = document.querySelector(".icon-section2");
 
@@ -62,7 +80,23 @@ const handleUploadForm = async (event) => {
     container_div2.appendChild(loading_div2);
     container_div2.appendChild(text_div2);
     icon_section2.appendChild(container_div2);
+}
 
+// 로딩 제거
+function loadingRemove() {
+    icon_section1.removeChild(container_div1);
+    icon_section2.removeChild(container_div2);
+}
+
+// 이미지 및 문구 출력
+const handleUploadForm = async (event) => {
+    event.preventDefault();
+    // 출력 이미지 제거
+    reset();
+    const body = new FormData(upload_form);
+    // 이미지 출력 전 로딩 출력
+    loadingCreate();
+    
     try {
         const res = await fetch("/upload", {
             method : "POST",
@@ -71,8 +105,9 @@ const handleUploadForm = async (event) => {
         const data = await res.json();
         if (data === "200") {
             console.log("업로드 성공");
-            icon_section1.removeChild(container_div1);
-            icon_section2.removeChild(container_div2);
+            // 로딩 제거
+            loadingRemove();
+            // 원본 이미지 출력
             const img = document.createElement("img");
             img.id = "origin-image";
             img.src = "#";
@@ -83,48 +118,10 @@ const handleUploadForm = async (event) => {
     } catch(e) {
         console.error(e);
     }
+    // 예측 결과 이미지 출력
     handlePreviewForm();
+    // 예측 결과 라벨 출력
     handleText();
 };
-
-// Detect 이미지 출력
-async function handlePreviewForm() {
-    const preview_section = document.querySelector(".icon-section2");
-    const img = document.createElement("img");
-    const res = await fetch("/detect_image");
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
-    img.src= url;
-    preview_section.appendChild(img);
-}
-
-// 문구 출력
-async function handleText() {
-    const detect_image_text = document.querySelector(".jackpots");
-    const res = await fetch("/condition");
-    const data = await res.json();
-
-    detect_image_text.innerText = data.toUpperCase();
-}
-
-// function handleDate() {
-//     const detect_image_text = document.querySelector(".jackpots");
-
-//     let today = new Date();
-
-//     let year = today.getFullYear();
-//     let month = String(today.getMonth() + 1).padStart(2, "0");
-//     let date = String(today.getDate()).padStart(2, "0");
-    
-//     let hour = String(today.getHours()).padStart(2, "0");
-//     let minute = String(today.getMinutes()).padStart(2, "0");
-//     let second = String(today.getSeconds()).padStart(2, "0");
-
-//     detect_image_text.innerText = `${year}-${month}-${date} ${hour}:${minute}:${second}`
-// }
-
-// handleDate();
-// setInterval(handleDate, 1000);
-
 
 upload_form.addEventListener("submit", handleUploadForm);

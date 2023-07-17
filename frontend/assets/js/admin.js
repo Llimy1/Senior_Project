@@ -91,35 +91,32 @@
       return div
     }
     
-        // Get the 'file-send' button and add a click event listener
+    // 버튼을 누르면 서버로 이미지 전송
     const fileSendButton = document.getElementById("file-send");
 
     fileSendButton.addEventListener("click", async () => {
-      // Create FormData object and append images
+      // Form 데이터 형식으로 이미지를 변환
       const formData = new FormData();
       for (let file of sel_files) {
         formData.append('images', file);
       }
 
-      // Send the form data to server using fetch
+      // fetch를 사용하여 POST 요청으로 서버에 통신
       const response = await fetch('/train', {
         method: 'POST',
         body: formData
       });
 
-      // Handle server response
       if (response.ok) {
         const result = await response.text();
         console.log("Upload successful:", result);
 
-        // Remove all image previews
+        // 서버에 전송 후 모든 이미지 삭제
         const attZone = document.getElementById("att_zone");
         attZone.innerHTML = "";
 
-        // Clear the sel_files array
         sel_files = [];
 
-        // Optionally, reset the input file element
         const btnAtt = document.getElementById("btnAtt");
         btnAtt.value = "";
       } else {
