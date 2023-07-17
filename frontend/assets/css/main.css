@@ -82,7 +82,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #2e3842;
+		background: #333333;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1332,142 +1332,6 @@ input, select, textarea {
 			background-color: #2e3842;
 		}
 
-		.wrapper.style3 {
-			background-color: #505393;
-			color: #d3d4e4;
-		}
-
-			.wrapper.style3 strong, .wrapper.style3 b {
-				color: #ffffff;
-			}
-
-			.wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
-				color: #ffffff;
-			}
-
-			.wrapper.style3 hr {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 blockquote {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 code {
-				background: rgba(255, 255, 255, 0.075);
-			}
-
-			.wrapper.style3 header p {
-				color: #b9bad4;
-			}
-
-			.wrapper.style3 header.major h2, .wrapper.style3 header.major h3, .wrapper.style3 header.major h4, .wrapper.style3 header.major h5, .wrapper.style3 header.major h6 {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 header.major p {
-				color: #d3d4e4;
-			}
-
-			.wrapper.style3 label {
-				color: #ffffff;
-			}
-
-			.wrapper.style3 input[type="text"],
-			.wrapper.style3 input[type="password"],
-			.wrapper.style3 input[type="email"],
-			.wrapper.style3 select,
-			.wrapper.style3 textarea {
-				background-color: rgba(255, 255, 255, 0.075);
-			}
-
-			.wrapper.style3 select {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(0, 0, 0, 0.125)' /%3E%3C/svg%3E");
-			}
-
-				.wrapper.style3 select option {
-					color: #ffffff;
-					background: #505393;
-				}
-
-
-			.wrapper.style3 ::-webkit-input-placeholder {
-				color: #b9bad4 !important;
-			}
-
-			.wrapper.style3 :-moz-placeholder {
-				color: #b9bad4 !important;
-			}
-
-			.wrapper.style3 ::-moz-placeholder {
-				color: #b9bad4 !important;
-			}
-
-			.wrapper.style3 :-ms-input-placeholder {
-				color: #b9bad4 !important;
-			}
-
-			.wrapper.style3 .formerize-placeholder {
-				color: #b9bad4 !important;
-			}
-
-			.wrapper.style3 .icon.major {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 ul.alt li {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 table tbody tr {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-				.wrapper.style3 table tbody tr:nth-child(2n + 1) {
-					background-color: rgba(255, 255, 255, 0.075);
-				}
-
-			.wrapper.style3 table th {
-				color: #ffffff;
-			}
-
-			.wrapper.style3 table thead {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 table tfoot {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 table.alt tbody tr td {
-				border-color: rgba(0, 0, 0, 0.125);
-			}
-
-			.wrapper.style3 input[type="submit"],
-			.wrapper.style3 input[type="reset"],
-			.wrapper.style3 input[type="button"],
-			.wrapper.style3 button,
-			.wrapper.style3 .button {
-				box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.125);
-				color: #ffffff;
-			}
-
-				.wrapper.style3 input[type="submit"]:hover,
-				.wrapper.style3 input[type="reset"]:hover,
-				.wrapper.style3 input[type="button"]:hover,
-				.wrapper.style3 button:hover,
-				.wrapper.style3 .button:hover {
-					background-color: rgba(255, 255, 255, 0.075);
-				}
-
-				.wrapper.style3 input[type="submit"]:active,
-				.wrapper.style3 input[type="reset"]:active,
-				.wrapper.style3 input[type="button"]:active,
-				.wrapper.style3 button:active,
-				.wrapper.style3 .button:active {
-					background-color: rgba(255, 255, 255, 0.2);
-				}
-
 		.wrapper.style4 {
 			background-color: transparent;
 		}
@@ -1609,7 +1473,7 @@ input, select, textarea {
 
 
 				.wrapper.style7 {
-					background-color: #00000013;
+					background-color: #bebebe13;
 					color: #c8ece9;
 				}
 
@@ -2252,207 +2116,6 @@ input, select, textarea {
 	}
 
 
-
-
-
-
-
-	/* 로딩 */
-	#link {color: #E45635;display:block;font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center; text-decoration: none;}
-	#link:hover {color: #CCCCCC}
-	
-	#link, #link:hover {-webkit-transition: color 0.5s ease-out;-moz-transition: color 0.5s ease-out;-ms-transition: color 0.5s ease-out;-o-transition: color 0.5s ease-out;transition: color 0.5s ease-out;}
-	
-	/** BEGIN CSS **/
-			body {background: #333333;}
-			@keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@-moz-keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@-webkit-keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@-o-keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@-moz-keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@-webkit-keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@-o-keyframes rotate-loading {
-				0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-				100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-			}
-	
-			@keyframes loading-text-opacity {
-				0%  {opacity: 0}
-				20% {opacity: 0}
-				50% {opacity: 1}
-				100%{opacity: 0}
-			}
-	
-			@-moz-keyframes loading-text-opacity {
-				0%  {opacity: 0}
-				20% {opacity: 0}
-				50% {opacity: 1}
-				100%{opacity: 0}
-			}
-	
-			@-webkit-keyframes loading-text-opacity {
-				0%  {opacity: 0}
-				20% {opacity: 0}
-				50% {opacity: 1}
-				100%{opacity: 0}
-			}
-	
-			@-o-keyframes loading-text-opacity {
-				0%  {opacity: 0}
-				20% {opacity: 0}
-				50% {opacity: 1}
-				100%{opacity: 0}
-			}
-			.loading-container,
-			.loading {
-				height: 100px;
-				position: relative;
-				width: 100px;
-				border-radius: 100%;
-				margin-top: 150px;
-			}
-	
-	
-			.loading-container { margin: 40px auto }
-	
-			.loading {
-				border: 2px solid transparent;
-				border-color: transparent #fff transparent #FFF;
-				-moz-animation: rotate-loading 1.5s linear 0s infinite normal;
-				-moz-transform-origin: 50% 50%;
-				-o-animation: rotate-loading 1.5s linear 0s infinite normal;
-				-o-transform-origin: 50% 50%;
-				-webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
-				-webkit-transform-origin: 50% 50%;
-				animation: rotate-loading 1.5s linear 0s infinite normal;
-				transform-origin: 50% 50%;
-			}
-	
-			.loading-container:hover .loading {
-				border-color: transparent #E45635 transparent #E45635;
-			}
-			.loading-container:hover .loading,
-			.loading-container .loading {
-				-webkit-transition: all 0.5s ease-in-out;
-				-moz-transition: all 0.5s ease-in-out;
-				-ms-transition: all 0.5s ease-in-out;
-				-o-transition: all 0.5s ease-in-out;
-				transition: all 0.5s ease-in-out;
-			}
-	
-			#loading-text {
-				-moz-animation: loading-text-opacity 2s linear 0s infinite normal;
-				-o-animation: loading-text-opacity 2s linear 0s infinite normal;
-				-webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
-				animation: loading-text-opacity 2s linear 0s infinite normal;
-				color: #ffffff;
-				font-family: "Helvetica Neue, "Helvetica", ""arial";
-				font-size: 10px;
-				font-weight: bold;
-				margin-top: 45px;
-				opacity: 0;
-				position: absolute;
-				text-align: center;
-				text-transform: uppercase;
-				top: 0;
-				width: 100px;
-				margin-top: 38px;
-			}
-	/* 로딩 */
-
-
-	/* 경고! */
-
-	@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-
-	.container {
-	  display: flex;
-	  border:1px solid white;
-	  height: 100%;
-	  align-items: center;
-	}
-	
-	svg {
-		display: block;
-		font: 10.5em 'Montserrat';
-		width: 960px;
-		height: 300px;
-		margin: 0 auto;
-	}
-	
-	.text-copy {
-		fill: rgba(143, 143, 143, 0.171);
-		stroke: rgb(255, 255, 255);
-		stroke-dasharray: 6% 29%;
-		stroke-width: 8px;
-		stroke-dashoffset: 0%;
-		animation: stroke-offset 5.5s infinite linear;
-	}
-	
-	.text-copy:nth-child(1){
-		stroke: #ff820d;
-		animation-delay: -1;
-	}
-	
-	.text-copy:nth-child(2){
-		stroke: #ff0000;
-		animation-delay: -2s;
-	}
-	
-	.text-copy:nth-child(3){
-		stroke: #ff0505;
-		animation-delay: -3s;
-	}
-	
-	.text-copy:nth-child(4){
-		stroke: #fd0000c7;
-		animation-delay: -4s;
-	}
-	
-	.text-copy:nth-child(5){
-		stroke: #ff0000;
-		animation-delay: -5s;
-	}
-	
-	@keyframes stroke-offset{
-		100% {stroke-dashoffset: -35%;}
-	}
-
-/* 경고! */
-
-/* 업로드 버튼 */
-
-/* 
 	  /* 로딩 */
 	#link {color: #E45635;display:block;font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center; text-decoration: none;}
 	#link:hover {color: #CCCCCC}
@@ -2588,9 +2251,6 @@ input, select, textarea {
 
 	/* 경고! */
 
-
-
-
 	.jackpots {
 		font-family: moon;
 		font-size: 6.3vw;
@@ -2662,14 +2322,6 @@ input, select, textarea {
 
 /* 경고! */
 
-/* 업로드 버튼 */
-
-
-
-
-
-
-/* 업로드 버튼 */
 
 .label-span {
 	position: absolute;
@@ -2709,7 +2361,7 @@ section.a {
 	float : left;
 	align-items: center;
 	/* background-color: rgb(0, 0, 0); */
-	width: 35%;
+	width: 33%;
 	height: 85%;
 	/* border: 1px solid red; */
 }
@@ -2718,7 +2370,7 @@ section.a {
 	float : left;
 	align-items: center;
 	/* background-color: rgb(0, 0, 0); */
-	width: 35%;
+	width: 33%;
 	height: 85%;
 	/* border: 1px solid red; */
 }
@@ -2729,8 +2381,8 @@ section.a {
 	top: 400px;
 	height: 80px;
 	width: 70%;
-	text-align: center;
 	float: left;
+	margin-left: 83px;
 	/* border: 1px solid red; */
 }
 
@@ -2767,6 +2419,67 @@ section.b {
 }
 .label2{
 	position: absolute;
-	right : 300px;
+	right : 360px;
 
 }
+#att_zone {
+	width: 100%;
+	min-height: 150px;
+	padding: 10px;
+	border: 1px dotted rgb(0, 0, 0);
+  }
+  
+  #att_zone:empty:before {
+	content: attr(data-placeholder);
+	color: #ffffff00;
+	font-size: .9em;
+  }
+
+
+  /* // 이미지와 체크 박스를 감싸고 있는 div 속성
+  let div_style = 'display:inline-block;position:relative;'
+				+ 'width:150px;height:120px;margin:5px;border:1px solid #fff;z-index:1';
+  // 미리보기 이미지 속성
+  let img_style = 'width:100%;height:100%;z-index:none';
+  // 이미지안에 표시되는 체크박스의 속성
+  let chk_style = 'width:10px;height:10px;position:absolute;font-size:24px;'
+				+ 'right:0px;bottom:0px;z-index:999;background-color:rgba(255,255,255,0.1);color:#f00'; */
+
+
+#divdiv{
+	display:inline-block;
+	position:relative;
+	width:150px;
+	height:120px;
+	margin:5px;
+	border:1px solid #fff;
+	z-index:1;
+}
+#btnbtn{
+	position:absolute;
+	right: -20px;
+	top: -18px;
+	z-index:999;
+	background-color:rgba(255, 255, 255, 0);
+	border: #05050500 solid 3px;
+	box-shadow: inset 0 0 0 2px #ffffff00;
+	font-size: 2px;
+	font-weight: 0;
+	height: 100%;
+	width: 100%;
+	max-width: 200px;
+	letter-spacing: 0em;
+	line-height: 20px;
+	padding: 0;
+}
+
+
+
+
+#imgimg{
+	width:100%;
+	height:100%;
+	z-index:none
+}
+
+

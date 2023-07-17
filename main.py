@@ -3,6 +3,7 @@ from fastapi import FastAPI, Form, UploadFile, Response
 from fastapi.staticfiles import StaticFiles
 from roboflow import Roboflow
 from typing import Annotated
+from typing import List
 import binascii
 import sqlite3
 import pygame
@@ -24,6 +25,14 @@ cur.execute(f"""
             CREATE TABLE IF NOT EXISTS detect (
                 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 condition TEXT,
+                image BLOB
+            );
+            """)
+
+cur.execute(f"""
+            CREATE TABLE IF NOT EXISTS train (
+                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                image_name TEXT,
                 image BLOB
             );
             """)
@@ -59,7 +68,6 @@ def signup(
 
     return "200"
 
-
 @app.post('/login')
 def login(
     id:Annotated[str, Form()],
@@ -70,8 +78,11 @@ def login(
         raise InvalidCredentialsException
     elif password != user['password']:
         raise InvalidCredentialsException
-    else: return '200'
-
+    elif user['id'] == "admin":
+        return '210'
+    else: 
+        return '200'
+   
 
 @app.post('/upload')
 async def create_image(image:UploadFile):
@@ -82,8 +93,8 @@ async def create_image(image:UploadFile):
         f.write(contents)
 
 
-    rf = Roboflow(api_key="YOUR_API_KEY")
-    project = rf.workspace("WORKSPACE_NAME").project("PROJECT_NAME")
+    rf = Roboflow(api_key="YOUT_API_KEY")
+    project = rf.workspace("WORKSPACE").project("PROJECT")
     model = project.version(2).model
     prediction = model.predict(f'./upload_img/{image_name}', confidence=40, overlap=30).json()
     detect_image = model.predict(f'./upload_img/{image_name}', confidence=40, overlap=30).save(f"./detect_img/detect_{image_name}")
@@ -102,7 +113,6 @@ async def create_image(image:UploadFile):
                 """)
     con.commit()
     return '200'
-
 
 @app.get('/detect_image')
 async def get_detect_image():
@@ -146,5 +156,17 @@ async def get_condition():
   
     return row
 
+@app.post('/train')
+async def create_image(images:List[UploadFile]):
+    for image in images:
+        image_name = image.filename
+        image_bytes = await image.read()
+        
+        cur.execute(f"""
+                    INSERT INTO train(image_name, image)
+                    VALUES ('{image_name}','{image_bytes.hex()}')
+                    """)
+    con.commit()
+    return '200'
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
