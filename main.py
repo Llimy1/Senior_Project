@@ -93,8 +93,8 @@ async def create_image(image:UploadFile):
         f.write(contents)
 
 
-    rf = Roboflow(api_key="YOUR_API_KEY")
-    project = rf.workspace("WORKSPACE_NAME").project("PROJECT_NAME")
+    rf = Roboflow(api_key="wDK3bzsneW0crbvVRixm")
+    project = rf.workspace("senior-pscm5").project("senior-yy8zv")
     model = project.version(2).model
     prediction = model.predict(f'./upload_img/{image_name}', confidence=40, overlap=30).json()
     detect_image = model.predict(f'./upload_img/{image_name}', confidence=40, overlap=30).save(f"./detect_img/detect_{image_name}")

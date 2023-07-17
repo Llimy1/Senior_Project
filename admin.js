@@ -5,15 +5,7 @@
     let btnAtt = document.getElementById(btn)
     let sel_files = [];
     
-    // 이미지와 체크 박스를 감싸고 있는 div 속성
-    let div_style = 'display:inline-block;position:relative;'
-                  + 'width:150px;height:120px;margin:5px;border:1px solid #00f;z-index:1';
-    // 미리보기 이미지 속성
-    let img_style = 'width:100%;height:100%;z-index:none';
-    // 이미지안에 표시되는 체크박스의 속성
-    let chk_style = 'width:30px;height:30px;position:absolute;font-size:24px;'
-                  + 'right:0px;bottom:0px;z-index:999;background-color:rgba(255,255,255,0.1);color:#f00';
-  
+ 
     btnAtt.onchange = function(e){
       let files = e.target.files;
       let fileArr = Array.prototype.slice.call(files)
@@ -54,8 +46,9 @@
       sel_files.push(file);
       let reader = new FileReader();
       reader.onload = function(ee){
-        let img = document.createElement('img')
-        img.setAttribute('style', img_style)
+        let img = document.createElement('img');
+        img.id = "imgimg";
+        // img.setAttribute('style', img_style)
         img.src = ee.target.result;
         attZone.appendChild(makeDiv(img, file));
       }
@@ -65,14 +58,16 @@
     
     /*첨부된 파일이 있는 경우 checkbox와 함께 attZone에 추가할 div를 만들어 반환 */
     makeDiv = function(img, file){
-      let div = document.createElement('div')
-      div.setAttribute('style', div_style)
+      let div = document.createElement('div');
+      div.id = "divdiv";
+      // div.setAttribute('style', div_style)
       
-      let btn = document.createElement('input')
-      btn.setAttribute('type', 'button')
-      btn.setAttribute('value', 'x')
+      let btn = document.createElement('input');
+      btn.id = "btnbtn";
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('value', 'x');
       btn.setAttribute('delFile', file.name);
-      btn.setAttribute('style', chk_style);
+      // btn.setAttribute('style', chk_style);
       btn.onclick = function(ev){
         let ele = ev.srcElement;
         let delFile = ele.getAttribute('delFile');
