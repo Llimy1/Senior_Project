@@ -7,6 +7,8 @@ from typing import List
 import binascii
 import sqlite3
 import pygame
+import json
+import os
 
 # sqlite3 database 연결
 con = sqlite3.connect('db.db', check_same_thread=False)
@@ -42,6 +44,10 @@ cur.execute(f"""
 
 
 app = FastAPI()
+
+rf = Roboflow(api_key="wDK3bzsneW0crbvVRixm")
+project = rf.workspace("senior-pscm5").project("senior-yy8zv")
+model = project.version(2).model
 
 # 로그인을 위해 user의 데이터를 가져온다.
 def query_user(data):
@@ -98,9 +104,6 @@ async def create_image(image:UploadFile):
         f.write(contents)
 
     # Roboflow API를 사용해 미리 학습 시킨 모델을 가져와서 사용 (직접 라벨링을 해서 학습을 시킴)
-    rf = Roboflow(api_key="YOUT_API_KEY")
-    project = rf.workspace("WORKSPACE").project("PROJECT")
-    model = project.version(2).model
     prediction = model.predict(f'./upload_img/{image_name}', confidence=40, overlap=30).json()
     detect_image = model.predict(f'./upload_img/{image_name}', confidence=40, overlap=30).save(f"./detect_img/detect_{image_name}")
 
@@ -169,7 +172,7 @@ async def get_condition():
     return row
 
 # 학습을 시킬 이미지를 데이터 베이스에 저장
-@app.post('/train')
+@app.post('/admin_upload')
 async def create_image(images:List[UploadFile]):
     for image in images:
         image_name = image.filename
@@ -181,5 +184,47 @@ async def create_image(images:List[UploadFile]):
                     """)
     con.commit()
     return '200'
+
+# 학습 모델 원본 이미지와, 예측 결과 json으로 저장
+@app.get('/train')
+async def train_image():
+    con.row_factory = sqlite3.Row
+    cur = con.cursor()
+
+    # 데이터 베이스에서 이미지 정보 가져오기
+    image_data = cur.execute(f"""
+                            SELECT image_name, image FROM train;
+                            """).fetchall()
+    
+    for data in image_data:
+        image_hex = data["image"]
+        image_name = data["image_name"]
+        image_bytes = bytes.fromhex(image_hex)
+
+        # 이미지 저장할 폴더 확인
+        if not os.path.exists('./train_image'):
+            os.makedirs('./train_image')
+
+        image_save_path = f"./train_image/{image_name}"
+        # 이미지 데이터를 바이너리 형식으로 복원 후 폴더 저장
+        with open(image_save_path, "wb") as f:
+            f.write(bytearray(image_bytes))
+
+        # 예측 결과 JSON 파일에 저장
+        prediction = model.predict(image_save_path, confidence=40, overlap=30).json()
+
+        # JSON 저장할 폴더 확인
+        if not os.path.exists('./train_json'):
+            os.makedirs('./train_json')
+
+        # 파일 확장자 제거 후 JSON 파일 폴더에 저장
+        json_name = os.path.splitext(os.path.basename(image_name))[0] + ".json"
+        with open(f"./train_json/{json_name}", "w") as f:
+            json.dump(prediction, f)
+
+        cur.execute("DELETE FROM train;")
+        con.commit()
+        return '200'
+
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")

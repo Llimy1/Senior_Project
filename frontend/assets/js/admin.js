@@ -102,7 +102,7 @@
       }
 
       // fetch를 사용하여 POST 요청으로 서버에 통신
-      const response = await fetch('/train', {
+      const response = await fetch('/admin_upload', {
         method: 'POST',
         body: formData
       });
@@ -119,9 +119,36 @@
 
         const btnAtt = document.getElementById("btnAtt");
         btnAtt.value = "";
+
+        Swal.fire(
+          "Upload Success !!",
+          "학습은 CLICK TO TRAIN 버튼을 눌러주세요.",
+          "success"
+        );
       } else {
         console.error("Upload failed with status:", response.status);
       }
     });
   }
 )('att_zone', 'btnAtt')
+
+document.getElementById("train-send").addEventListener("click", function() {
+  fetch("/train", {
+    method: "GET",
+    headers: {
+      "Content-Type": "apllication/json",
+    },
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    Swal.fire(
+      "Train Success",
+      "학습 완료!!",
+      "success"
+    );
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+});
