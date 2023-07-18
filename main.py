@@ -49,7 +49,7 @@ rf = Roboflow(api_key="wDK3bzsneW0crbvVRixm")
 project = rf.workspace("senior-pscm5").project("senior-yy8zv")
 model = project.version(2).model
 
-# 로그인을 위해 user의 데이터를 가져온다.
+# 로그인을 위해 데이터 베이스에서 user의 데이터를 가져온다.
 def query_user(data):
     WHERE_STATEMENTS = f'''id="{data}"'''
     if type(data) == dict:
@@ -200,31 +200,20 @@ async def train_image():
         image_hex = data["image"]
         image_name = data["image_name"]
         image_bytes = bytes.fromhex(image_hex)
-
-        # 이미지 저장할 폴더 확인
-        if not os.path.exists('./train_image'):
-            os.makedirs('./train_image')
-
+       
         image_save_path = f"./train_image/{image_name}"
-        # 이미지 데이터를 바이너리 형식으로 복원 후 폴더 저장
+        # 이미지 데이터를 바이너리 형식으로 복원 후 폴더 저장 
         with open(image_save_path, "wb") as f:
             f.write(bytearray(image_bytes))
 
-        # 예측 결과 JSON 파일에 저장
         prediction = model.predict(image_save_path, confidence=40, overlap=30).json()
 
-        # JSON 저장할 폴더 확인
-        if not os.path.exists('./train_json'):
-            os.makedirs('./train_json')
-
-        # 파일 확장자 제거 후 JSON 파일 폴더에 저장
         json_name = os.path.splitext(os.path.basename(image_name))[0] + ".json"
         with open(f"./train_json/{json_name}", "w") as f:
             json.dump(prediction, f)
 
-        cur.execute("DELETE FROM train;")
-        con.commit()
-        return '200'
+    cur.execute("DELETE FROM train;")
+    con.commit()
 
-
+# 서버에 Frontend 파일 적용
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")

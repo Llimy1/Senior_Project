@@ -125,8 +125,14 @@
           "학습은 CLICK TO TRAIN 버튼을 눌러주세요.",
           "success"
         );
+      } else if (response.status === 400) {
+        Swal.fire(
+          "Upload Fail !!",
+          "이미지를 골라주세요 !",
+          "error"
+        )
       } else {
-        console.error("Upload failed with status:", response.status);
+          console.error("Upload failed with status:", response.status);
       }
     });
   }
@@ -141,12 +147,21 @@ document.getElementById("train-send").addEventListener("click", function() {
   })
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
-    Swal.fire(
-      "Train Success",
-      "학습 완료!!",
-      "success"
-    );
+    if (data === null) {
+      console.log(data);
+      Swal.fire(
+        "Train Fail !!",
+        "업로드 후 버튼을 눌러주세요 !",
+        "error"
+      );
+    } else {
+      Swal.fire(
+        "Train Success",
+        "학습 완료!!",
+        "success"
+      );
+    }
+    
   })
   .catch((error) => {
     console.error(error);
