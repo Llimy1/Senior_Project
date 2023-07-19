@@ -138,32 +138,29 @@
   }
 )('att_zone', 'btnAtt')
 
-document.getElementById("train-send").addEventListener("click", function() {
-  fetch("/train", {
+document.getElementById("train-send").addEventListener("click", async function() {
+  const response = await fetch("/train", {
     method: "GET",
     headers: {
-      "Content-Type": "apllication/json",
+      "Content-Type": "application/json",
     },
-  })
-  .then((response) => response.json())
-  .then((data) => {
-    if (data === null) {
-      console.log(data);
-      Swal.fire(
-        "Train Fail !!",
-        "업로드 후 버튼을 눌러주세요 !",
-        "error"
-      );
-    } else {
-      Swal.fire(
-        "Train Success",
-        "학습 완료!!",
-        "success"
-      );
-    }
-    
-  })
-  .catch((error) => {
-    console.error(error);
   });
+
+  const data = await response.json();
+  if (data === "200") {
+    console.log(data);
+    Swal.fire(
+      "Train Success",
+      "학습 완료!!",
+      "success"
+    );
+  } else if (data === "400") {
+    Swal.fire(
+      "Train Fail !!",
+      "업로드 후 버튼을 눌러주세요 !",
+      "error"
+    );
+  } else {
+    console.error("Train failed with status:", response.status);
+  }
 });

@@ -45,8 +45,8 @@ cur.execute(f"""
 
 app = FastAPI()
 
-rf = Roboflow(api_key="wDK3bzsneW0crbvVRixm")
-project = rf.workspace("senior-pscm5").project("senior-yy8zv")
+rf = Roboflow(api_key="인증키!!!")
+project = rf.workspace("프로젝트!").project("이름!")
 model = project.version(2).model
 
 # 로그인을 위해 데이터 베이스에서 user의 데이터를 가져온다.
@@ -196,24 +196,30 @@ async def train_image():
                             SELECT image_name, image FROM train;
                             """).fetchall()
     
-    for data in image_data:
-        image_hex = data["image"]
-        image_name = data["image_name"]
-        image_bytes = bytes.fromhex(image_hex)
-       
-        image_save_path = f"./train_image/{image_name}"
-        # 이미지 데이터를 바이너리 형식으로 복원 후 폴더 저장 
-        with open(image_save_path, "wb") as f:
-            f.write(bytearray(image_bytes))
+    if len(image_data) != 0: 
+    
+        for data in image_data:
+            image_hex = data["image"]
+            image_name = data["image_name"]
+            image_bytes = bytes.fromhex(image_hex)
+        
+            image_save_path = f"./train_image/{image_name}"
+            # 이미지 데이터를 바이너리 형식으로 복원 후 폴더 저장 
+            with open(image_save_path, "wb") as f:
+                f.write(bytearray(image_bytes))
 
-        prediction = model.predict(image_save_path, confidence=40, overlap=30).json()
+            prediction = model.predict(image_save_path, confidence=40, overlap=30).json()
 
-        json_name = os.path.splitext(os.path.basename(image_name))[0] + ".json"
-        with open(f"./train_json/{json_name}", "w") as f:
-            json.dump(prediction, f)
-
-    cur.execute("DELETE FROM train;")
-    con.commit()
+            json_name = os.path.splitext(os.path.basename(image_name))[0] + ".json"
+            with open(f"./train_json/{json_name}", "w") as f:
+                json.dump(prediction, f)
+            
+        cur.execute("DELETE FROM train;")
+        con.commit()
+        return "200"
+    else:
+        return "400"
+ 
 
 # 서버에 Frontend 파일 적용
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
