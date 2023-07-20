@@ -6,25 +6,16 @@
 - 팀원 : 원설아, 이은전, 정유찬
 
 > <h2>⚙ 개발 환경</h2>
-- 운영체제 : ```Window```
-- 통합개발환경(IDE) : ```VS Code```
+- 운영체제 : <img alt="windows" src ="https://img.shields.io/badge/windows-5C3EE8.svg?&style=for-the-badge&logo=windows&logoColor=white"/>
+- 통합개발환경(IDE) : <img alt="visualstudiocode" src ="https://img.shields.io/badge/visualstudiocode-5C3EE8.svg?&style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
 - CUDA 버전: ```CUDA 10.1```
 - CUDNN 버전: ```CUDNN 7.6```
 - Anaconda: ```Miniconda3```
-- 관리 툴: ```GitHub```
+- 관리 툴: <img alt="github" src ="https://img.shields.io/badge/github-5C3EE8.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 
 > <h2>🗃 기술 스택</h2>
-- ```YOLOv7```
-- ```OpenCV```
-- ```tensorflow-gpu```
-- ```Python```
-- ```FAST API```
-- ```Arduino```
-- ```Html```
-- ```CSS```
-- ```Javascript```
-- ```jquery```
-- ```SQLite```
+<img alt="OpenCV" src ="https://img.shields.io/badge/OpenCV-5C3EE8.svg?&style=for-the-badge&logo=opencv&logoColor=white"/><img alt="yolo" src ="https://img.shields.io/badge/yolo-00FFFF.svg?&style=for-the-badge&logo=yolo&logoColor=white"/><img alt="tensorflow" src ="https://img.shields.io/badge/tensorflow-FF6F00.svg?&style=for-the-badge&logo=tensorflow&logoColor=white"/><img alt="python" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/><img alt="fastapi" src ="https://img.shields.io/badge/fastapi-3776AB.svg?&style=for-the-badge&logo=fastapi&logoColor=white"/><img alt="arduino" src ="https://img.shields.io/badge/arduino-3776AB.svg?&style=for-the-badge&logo=arduino&logoColor=white"/><img alt="html5" src ="https://img.shields.io/badge/html5-3776AB.svg?&style=for-the-badge&logo=html5&logoColor=white"/><img alt="css3" src ="https://img.shields.io/badge/css3-3776AB.svg?&style=for-the-badge&logo=css3&logoColor=white"/><img alt="javascript" src ="https://img.shields.io/badge/javascript-3776AB.svg?&style=for-the-badge&logo=javascript&logoColor=white"/><img alt="jquery" src ="https://img.shields.io/badge/jquery-3776AB.svg?&style=for-the-badge&logo=jquery&logoColor=white"/><img alt="sqlite" src ="https://img.shields.io/badge/sqlite-3776AB.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
+
 
 > <h2>📋 프로젝트 소개 및 구조</h2>
 - [AI-HUB](https://www.aihub.or.kr/) 데이터의 [시니어 이상행동 데이터셋](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=167)을 활용하여 요양원의 시니어 낙상 및 배회 등을 빠른 대처를 위한 스마트 지능형 CCTV 기능 구현
