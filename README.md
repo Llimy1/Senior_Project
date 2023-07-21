@@ -6,15 +6,15 @@
 - 팀원 : 원설아, 이은전, 정유찬
 
 > <h2>⚙ 개발 환경</h2>
-- 운영체제 : <img alt="windows" src ="https://img.shields.io/badge/windows-5C3EE8.svg?&style=for-the-badge&logo=windows&logoColor=white"/>
-- 통합개발환경(IDE) : <img alt="visualstudiocode" src ="https://img.shields.io/badge/visualstudiocode-5C3EE8.svg?&style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
-- CUDA 버전: ```CUDA 10.1```
-- CUDNN 버전: ```CUDNN 7.6```
-- Anaconda: ```Miniconda3```
-- 관리 툴: <img alt="github" src ="https://img.shields.io/badge/github-5C3EE8.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+- 운영체제 : <br><img alt="windows" src ="https://img.shields.io/badge/windows-0078D6.svg?&style=for-the-badge&logo=windows&logoColor=white"/>
+- 통합개발환경(IDE) : <br><img alt="visualstudiocode" src ="https://img.shields.io/badge/visualstudiocode-007ACC.svg?&style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
+- CUDA 버전: <br>![CUDA 10.1](https://img.shields.io/badge/CUDA-10.1-green)
+- CUDNN 버전: <br>![CUDNN 7.6](https://img.shields.io/badge/CUDNN-7.6-green)
+- Anaconda: <br>![Miniconda](https://img.shields.io/badge/Miniconda3-green)
+- 관리 툴: <br><img alt="github" src ="https://img.shields.io/badge/github-181717.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 
 > <h2>🗃 기술 스택</h2>
-<img alt="OpenCV" src ="https://img.shields.io/badge/OpenCV-5C3EE8.svg?&style=for-the-badge&logo=opencv&logoColor=white"/><img alt="yolo" src ="https://img.shields.io/badge/yolo-00FFFF.svg?&style=for-the-badge&logo=yolo&logoColor=white"/><img alt="tensorflow" src ="https://img.shields.io/badge/tensorflow-FF6F00.svg?&style=for-the-badge&logo=tensorflow&logoColor=white"/><img alt="python" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/><img alt="fastapi" src ="https://img.shields.io/badge/fastapi-3776AB.svg?&style=for-the-badge&logo=fastapi&logoColor=white"/><img alt="arduino" src ="https://img.shields.io/badge/arduino-3776AB.svg?&style=for-the-badge&logo=arduino&logoColor=white"/><img alt="html5" src ="https://img.shields.io/badge/html5-3776AB.svg?&style=for-the-badge&logo=html5&logoColor=white"/><img alt="css3" src ="https://img.shields.io/badge/css3-3776AB.svg?&style=for-the-badge&logo=css3&logoColor=white"/><img alt="javascript" src ="https://img.shields.io/badge/javascript-3776AB.svg?&style=for-the-badge&logo=javascript&logoColor=white"/><img alt="jquery" src ="https://img.shields.io/badge/jquery-3776AB.svg?&style=for-the-badge&logo=jquery&logoColor=white"/><img alt="sqlite" src ="https://img.shields.io/badge/sqlite-3776AB.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
+<img alt="OpenCV" src ="https://img.shields.io/badge/OpenCV-5C3EE8.svg?&style=for-the-badge&logo=opencv&logoColor=white"/><img alt="yolo" src ="https://img.shields.io/badge/yolo-00FFFF.svg?&style=for-the-badge&logo=yolo&logoColor=white"/><img alt="tensorflow" src ="https://img.shields.io/badge/tensorflow-FF6F00.svg?&style=for-the-badge&logo=tensorflow&logoColor=white"/><img alt="python" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/><img alt="fastapi" src ="https://img.shields.io/badge/fastapi-009688.svg?&style=for-the-badge&logo=fastapi&logoColor=white"/><br><img alt="arduino" src ="https://img.shields.io/badge/arduino-00979D.svg?&style=for-the-badge&logo=arduino&logoColor=white"/><img alt="html5" src ="https://img.shields.io/badge/html5-E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/><img alt="css3" src ="https://img.shields.io/badge/css3-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/><img alt="javascript" src ="https://img.shields.io/badge/javascript-F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=white"/><img alt="jquery" src ="https://img.shields.io/badge/jquery-0769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white"/><img alt="sqlite" src ="https://img.shields.io/badge/sqlite-003B57.svg?&style=for-the-badge&logo=sqlite&logoColor=white"/>
 
 
 > <h2>📋 프로젝트 소개 및 구조</h2>
